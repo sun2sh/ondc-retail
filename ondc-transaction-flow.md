@@ -1,37 +1,55 @@
-stateDiagram-v2
-    [*] --> INITIATED: /init
-    INITIATED --> CREATED: /confirm
-    CREATED --> ACCEPTED: Seller Accepts
-    ACCEPTED --> IN_PROGRESS: Processing Started
+```mermaid
+sequenceDiagram
+    participant B as Buyer App
+    participant G as Gateway
+    participant S as Seller App
     
-    IN_PROGRESS --> READY_TO_SHIP: Items Packed
-    READY_TO_SHIP --> SHIPPED: Dispatched
-    SHIPPED --> DELIVERED: Delivered
-    DELIVERED --> COMPLETED: Order Complete
-    COMPLETED --> [*]
+    %% Search Flow
+    B->>G: /search (find sellers)
+    G->>S: /search (forward)
+    S-->>G: /on_search (catalog response)
+    G-->>B: /on_search (catalog)
     
-    INITIATED --> CANCELLED: /cancel
-    CREATED --> CANCELLED: /cancel
-    ACCEPTED --> CANCELLED: /cancel
-    IN_PROGRESS --> CANCELLED: /cancel
+    %% Select Flow
+    B->>G: /select (items)
+    G->>S: /select (forward)
+    S-->>G: /on_select (quote)
+    G-->>B: /on_select (quote)
     
-    DELIVERED --> RETURN_INITIATED: /return
-    RETURN_INITIATED --> RETURN_ACCEPTED: Seller Accepts
-    RETURN_ACCEPTED --> RETURN_PICKED: Pickup Done
-    RETURN_PICKED --> RETURN_DELIVERED: Return Complete
-    RETURN_DELIVERED --> REFUNDED: Refund Processed
+    %% Init Flow
+    B->>G: /init (order details)
+    G->>S: /init (forward)
+    S-->>G: /on_init (draft order)
+    G-->>B: /on_init (draft order)
     
-    note right of INITIATED
-        Payment can be at multiple states
-        based on payment method
-    end note
+    %% Confirm Flow
+    B->>G: /confirm (final order)
+    G->>S: /confirm (forward)
+    S-->>G: /on_confirm (order confirmed)
+    G-->>B: /on_confirm (order confirmed)
     
-    note right of IN_PROGRESS
-        Status updates via /on_status
-        Tracking via /on_track
-    end note
+    %% Status & Tracking
+    B->>G: /status (check)
+    G->>S: /status (forward)
+    S-->>G: /on_status (current state)
+    G-->>B: /on_status (current state)
     
-    note right of CANCELLED
-        Refund flow starts
-        based on payment status
-    end note
+    B->>G: /track (fulfillment)
+    G->>S: /track (forward)
+    S-->>G: /on_track (tracking details)
+    G-->>B: /on_track (tracking details)
+    
+    %% Update Flow
+    Note over B,S: Updates can be initiated by either party
+    B->>G: /update (modify order)
+    G->>S: /update (forward)
+    S-->>G: /on_update (updated state)
+    G-->>B: /on_update (updated state)
+    
+    %% Cancel Flow
+    Note over B,S: Cancellation can be initiated by either party
+    B->>G: /cancel (cancel order)
+    G->>S: /cancel (forward)
+    S-->>G: /on_cancel (cancelled state)
+    G-->>B: /on_cancel (cancelled state)
+```
