@@ -1,0 +1,228 @@
+{
+  "domain": "Retail",
+  "domain_code": "RET",
+  "version": "2.0.0",
+  "taxonomy": {
+    "subdomain": {
+      "name": "Fashion",
+      "code": "12",
+      "categories": [
+        {
+          "name": "Fashion Accessories",
+          "category_items": [
+            {
+              "id": "RET12-100",
+              "descriptor": {
+                "name": "Headwraps"
+              },
+              "attribute_groups": [
+                {
+                  "group_name": "Mandatory Core Attributes",
+                  "attributes": [
+                    {"name": "gender", "display_name": "Gender", "type": "enum", "values": ["Men", "Women", "Unisex", "Boys", "Girls"], "required": true},
+                    {"name": "colour", "display_name": "Colour", "type": "string", "required": true},
+                    {"name": "size", "display_name": "Size", "type": "enum", "values": ["Free Size", "S", "M", "L", "XL", "XXL"], "required": true},
+                    {"name": "brand_name", "display_name": "Brand Name", "type": "string", "required": true},
+                    {"name": "mrp", "display_name": "MRP", "type": "number", "required": true},
+                    {"name": "selling_price", "display_name": "Selling Price", "type": "number", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Mandatory Item-specific Attributes",
+                  "attributes": [
+                    {"name": "material_content", "display_name": "Material / Content", "type": "string", "required": true},
+                    {"name": "country_of_origin", "display_name": "Country of Origin", "type": "string", "required": true},
+                    {"name": "customer_care_contact", "display_name": "Customer Care Contact", "type": "string", "required": true},
+                    {"name": "time_to_ship", "display_name": "Time to Ship", "type": "string", "required": true},
+                    {"name": "cancellable", "display_name": "Cancellable (Y/N)", "type": "boolean", "required": true},
+                    {"name": "returnable", "display_name": "Returnable (Y/N)", "type": "boolean", "required": true},
+                    {"name": "replaceable", "display_name": "Replaceable (Y/N)", "type": "boolean", "required": true},
+                    {"name": "cod_available", "display_name": "COD Available (Y/N)", "type": "boolean", "required": true},
+                    {"name": "images", "display_name": "Product Images", "type": "array", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Optional Item-specific Attributes",
+                  "attributes": [
+                    {"name": "season", "display_name": "Season", "type": "enum", "values": ["Summer", "Winter", "All Season", "Rainy"], "required": false},
+                    {"name": "occasion", "display_name": "Occasion", "type": "enum", "values": ["Casual", "Formal", "Party", "Wedding", "Sports"], "required": false},
+                    {"name": "pattern", "display_name": "Pattern", "type": "enum", "values": ["Solid", "Printed", "Striped", "Checkered", "Embroidered"], "required": false},
+                    {"name": "features", "display_name": "Features", "type": "string", "required": false}
+                  ]
+                }
+              ],
+              "keywords": ["Fashion", "Accessories", "Headwear", "Hair Accessories"]
+            },
+            {
+              "id": "RET12-101",
+              "descriptor": {
+                "name": "Cufflinks"
+              },
+              "attribute_groups": [
+                {
+                  "group_name": "Mandatory Core Attributes",
+                  "attributes": [
+                    {"name": "gender", "display_name": "Gender", "type": "enum", "values": ["Men", "Unisex"], "required": true},
+                    {"name": "colour", "display_name": "Colour", "type": "string", "required": true},
+                    {"name": "size", "display_name": "Size", "type": "enum", "values": ["Free Size"], "required": true},
+                    {"name": "brand_name", "display_name": "Brand Name", "type": "string", "required": true},
+                    {"name": "mrp", "display_name": "MRP", "type": "number", "required": true},
+                    {"name": "selling_price", "display_name": "Selling Price", "type": "number", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Mandatory Item-specific Attributes",
+                  "attributes": [
+                    {"name": "material_content", "display_name": "Material / Content", "type": "string", "required": true},
+                    {"name": "country_of_origin", "display_name": "Country of Origin", "type": "string", "required": true},
+                    {"name": "customer_care_contact", "display_name": "Customer Care Contact", "type": "string", "required": true},
+                    {"name": "images", "display_name": "Product Images", "type": "array", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Optional Item-specific Attributes",
+                  "attributes": [
+                    {"name": "occasion", "display_name": "Occasion", "type": "enum", "values": ["Formal", "Party", "Wedding", "Business"], "required": false},
+                    {"name": "design_style", "display_name": "Design / Style Type", "type": "string", "required": false},
+                    {"name": "base_metal", "display_name": "Base Metal", "type": "enum", "values": ["Brass", "Stainless Steel", "Sterling Silver", "Gold Plated"], "required": false},
+                    {"name": "plating", "display_name": "Plating", "type": "string", "required": false}
+                  ]
+                }
+              ],
+              "keywords": ["Fashion", "Accessories", "Formal Wear", "Men", "Cufflinks"]
+            }
+          ]
+        },
+        {
+          "name": "Topwear",
+          "category_items": [
+            {
+              "id": "RET12-126",
+              "descriptor": {
+                "name": "Lounge T-Shirts"
+              },
+              "attribute_groups": [
+                {
+                  "group_name": "Mandatory Core Attributes",
+                  "attributes": [
+                    {"name": "gender", "display_name": "Gender", "type": "enum", "values": ["Men", "Women", "Boys", "Girls", "Unisex"], "required": true},
+                    {"name": "colour", "display_name": "Colour", "type": "string", "required": true},
+                    {"name": "size", "display_name": "Size", "type": "enum", "values": ["XS", "S", "M", "L", "XL", "XXL", "3XL"], "required": true},
+                    {"name": "brand_name", "display_name": "Brand Name", "type": "string", "required": true},
+                    {"name": "mrp", "display_name": "MRP", "type": "number", "required": true},
+                    {"name": "selling_price", "display_name": "Selling Price", "type": "number", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Mandatory Item-specific Attributes",
+                  "attributes": [
+                    {"name": "material_content", "display_name": "Material / Content", "type": "string", "required": true},
+                    {"name": "fabric", "display_name": "Fabric", "type": "string", "required": true},
+                    {"name": "country_of_origin", "display_name": "Country of Origin", "type": "string", "required": true},
+                    {"name": "care_instructions", "display_name": "Care Instructions", "type": "string", "required": true},
+                    {"name": "images", "display_name": "Product Images", "type": "array", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Optional Item-specific Attributes",
+                  "attributes": [
+                    {"name": "season", "display_name": "Season", "type": "enum", "values": ["Summer", "Winter", "All Season"], "required": false},
+                    {"name": "pattern", "display_name": "Pattern", "type": "enum", "values": ["Solid", "Printed", "Striped", "Graphic"], "required": false},
+                    {"name": "sleeve_length", "display_name": "Sleeve Length", "type": "enum", "values": ["Half Sleeve", "Full Sleeve", "Sleeveless"], "required": false},
+                    {"name": "neck", "display_name": "Neck", "type": "enum", "values": ["Round Neck", "V-Neck", "Polo Collar", "Henley"], "required": false},
+                    {"name": "fit", "display_name": "Fit", "type": "enum", "values": ["Regular", "Slim", "Loose", "Relaxed"], "required": false}
+                  ]
+                }
+              ],
+              "keywords": ["Fashion", "Clothing", "T-Shirts", "Lounge Wear", "Casual"]
+            },
+            {
+              "id": "RET12-134",
+              "descriptor": {
+                "name": "Shirts"
+              },
+              "attribute_groups": [
+                {
+                  "group_name": "Mandatory Core Attributes",
+                  "attributes": [
+                    {"name": "gender", "display_name": "Gender", "type": "enum", "values": ["Men", "Women", "Boys", "Girls", "Unisex"], "required": true},
+                    {"name": "colour", "display_name": "Colour", "type": "string", "required": true},
+                    {"name": "size", "display_name": "Size", "type": "enum", "values": ["36", "38", "40", "42", "44", "46", "S", "M", "L", "XL", "XXL"], "required": true},
+                    {"name": "brand_name", "display_name": "Brand Name", "type": "string", "required": true},
+                    {"name": "mrp", "display_name": "MRP", "type": "number", "required": true},
+                    {"name": "selling_price", "display_name": "Selling Price", "type": "number", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Mandatory Item-specific Attributes",
+                  "attributes": [
+                    {"name": "material_content", "display_name": "Material / Content", "type": "string", "required": true},
+                    {"name": "fabric", "display_name": "Fabric", "type": "string", "required": true},
+                    {"name": "country_of_origin", "display_name": "Country of Origin", "type": "string", "required": true},
+                    {"name": "care_instructions", "display_name": "Care Instructions", "type": "string", "required": true},
+                    {"name": "images", "display_name": "Product Images", "type": "array", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Optional Item-specific Attributes",
+                  "attributes": [
+                    {"name": "pattern", "display_name": "Pattern", "type": "enum", "values": ["Solid", "Printed", "Striped", "Checkered"], "required": false},
+                    {"name": "sleeve_length", "display_name": "Sleeve Length", "type": "enum", "values": ["Full Sleeve", "Half Sleeve", "Roll-up Sleeve", "Sleeveless"], "required": false},
+                    {"name": "collar", "display_name": "Collar", "type": "enum", "values": ["Regular", "Button Down", "Spread", "Mandarin", "Cutaway"], "required": false},
+                    {"name": "fit", "display_name": "Fit", "type": "enum", "values": ["Regular", "Slim", "Relaxed"], "required": false},
+                    {"name": "occasion", "display_name": "Occasion", "type": "enum", "values": ["Casual", "Formal", "Party", "Work Wear"], "required": false}
+                  ]
+                }
+              ],
+              "keywords": ["Fashion", "Clothing", "Shirts", "Topwear", "Formal", "Casual"]
+            }
+          ]
+        },
+        {
+          "name": "Footwear",
+          "category_items": [
+            {
+              "id": "RET12-181",
+              "descriptor": {
+                "name": "Sandals & Floaters"
+              },
+              "attribute_groups": [
+                {
+                  "group_name": "Mandatory Core Attributes",
+                  "attributes": [
+                    {"name": "gender", "display_name": "Gender", "type": "enum", "values": ["Men", "Women", "Boys", "Girls", "Unisex"], "required": true},
+                    {"name": "colour", "display_name": "Colour", "type": "string", "required": true},
+                    {"name": "size", "display_name": "Size", "type": "enum", "values": ["4", "5", "6", "7", "8", "9", "10", "11", "12"], "required": true},
+                    {"name": "brand_name", "display_name": "Brand Name", "type": "string", "required": true},
+                    {"name": "mrp", "display_name": "MRP", "type": "number", "required": true},
+                    {"name": "selling_price", "display_name": "Selling Price", "type": "number", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Mandatory Item-specific Attributes",
+                  "attributes": [
+                    {"name": "material_content", "display_name": "Material / Content", "type": "string", "required": true},
+                    {"name": "sole_material", "display_name": "Sole Material", "type": "string", "required": true},
+                    {"name": "country_of_origin", "display_name": "Country of Origin", "type": "string", "required": true},
+                    {"name": "images", "display_name": "Product Images", "type": "array", "required": true}
+                  ]
+                },
+                {
+                  "group_name": "Optional Item-specific Attributes",
+                  "attributes": [
+                    {"name": "fastening", "display_name": "Fastening", "type": "enum", "values": ["Slip-On", "Buckle", "Velcro", "Lace-Up"], "required": false},
+                    {"name": "heel_height", "display_name": "Heel Height", "type": "enum", "values": ["Flat", "Low", "Medium", "High"], "required": false},
+                    {"name": "occasion", "display_name": "Occasion", "type": "enum", "values": ["Casual", "Formal", "Party", "Beach", "Sports"], "required": false},
+                    {"name": "pattern", "display_name": "Pattern", "type": "enum", "values": ["Solid", "Printed", "Textured"], "required": false},
+                    {"name": "features", "display_name": "Features", "type": "string", "required": false}
+                  ]
+                }
+              ],
+              "keywords": ["Fashion", "Footwear", "Sandals", "Floaters", "Casual"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
