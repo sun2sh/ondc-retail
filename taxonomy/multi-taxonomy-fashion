@@ -1,0 +1,550 @@
+{
+  "context": {
+    "domain": "ONDC:RET10",
+    "country": "IND",
+    "city": "std:080",
+    "action": "on_search",
+    "bpp_id": "example_fashion_seller.com",
+    "bpp_uri": "https://example_fashion_seller.com/ondc",
+    "transaction_id": "T123456789",
+    "message_id": "M123456789",
+    "timestamp": "2025-03-14T10:30:00+05:30"
+  },
+  "message": {
+    "catalog": {
+      "bpp/descriptor": {
+        "name": "FashionStore",
+        "short_desc": "Quality Fashion Products",
+        "long_desc": "Offering a wide range of trendy fashion products",
+        "images": ["https://fashionstore.com/logo.png"]
+      },
+      "bpp/categories": [
+        {
+          "id": "taxonomy-primary",
+          "descriptor": {
+            "name": "Primary Taxonomy",
+            "short_desc": "Standard RET12 ONDC taxonomy structure"
+          },
+          "categories": [
+            {
+              "id": "RET12",
+              "descriptor": {
+                "name": "Fashion"
+              },
+              "categories": [
+                {
+                  "id": "RET12-FA",
+                  "descriptor": {
+                    "name": "Fashion Accessories"
+                  },
+                  "tags": [
+                    {
+                      "code": "taxonomy_code",
+                      "list": [
+                        {
+                          "code": "category_range",
+                          "value": "RET12-100 to RET12-119"
+                        }
+                      ]
+                    }
+                  ],
+                  "categories": [
+                    {
+                      "id": "RET12-100",
+                      "descriptor": {
+                        "name": "Headwraps"
+                      }
+                    },
+                    {
+                      "id": "RET12-101",
+                      "descriptor": {
+                        "name": "Cufflinks"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "RET12-TW",
+                  "descriptor": {
+                    "name": "Topwear"
+                  },
+                  "tags": [
+                    {
+                      "code": "taxonomy_code",
+                      "list": [
+                        {
+                          "code": "category_range",
+                          "value": "RET12-120 to RET12-159"
+                        }
+                      ]
+                    }
+                  ],
+                  "categories": [
+                    {
+                      "id": "RET12-126",
+                      "descriptor": {
+                        "name": "Lounge T-Shirts"
+                      }
+                    },
+                    {
+                      "id": "RET12-134",
+                      "descriptor": {
+                        "name": "Shirts"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "RET12-FW",
+                  "descriptor": {
+                    "name": "Footwear"
+                  },
+                  "tags": [
+                    {
+                      "code": "taxonomy_code",
+                      "list": [
+                        {
+                          "code": "category_range",
+                          "value": "RET12-180 to RET12-199"
+                        }
+                      ]
+                    }
+                  ],
+                  "categories": [
+                    {
+                      "id": "RET12-181",
+                      "descriptor": {
+                        "name": "Sandals & Floaters"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "taxonomy-gender",
+          "descriptor": {
+            "name": "Gender-Based Taxonomy",
+            "short_desc": "Products organized by gender categories"
+          },
+          "categories": [
+            {
+              "id": "GENDER-MEN",
+              "descriptor": {
+                "name": "Men"
+              },
+              "categories": [
+                {
+                  "id": "GENDER-MEN-APPAREL",
+                  "descriptor": {
+                    "name": "Men's Apparel"
+                  },
+                  "categories": [
+                    {
+                      "id": "GENDER-MEN-APPAREL-TOPS",
+                      "descriptor": {
+                        "name": "Tops"
+                      },
+                      "tags": [
+                        {
+                          "code": "mapping",
+                          "list": [
+                            {
+                              "code": "primary_taxonomy",
+                              "value": "RET12-134, RET12-126"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "GENDER-MEN-ACCESSORIES",
+                  "descriptor": {
+                    "name": "Men's Accessories"
+                  },
+                  "tags": [
+                    {
+                      "code": "mapping",
+                      "list": [
+                        {
+                          "code": "primary_taxonomy",
+                          "value": "RET12-101"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "GENDER-WOMEN",
+              "descriptor": {
+                "name": "Women"
+              },
+              "categories": [
+                {
+                  "id": "GENDER-WOMEN-ACCESSORIES",
+                  "descriptor": {
+                    "name": "Women's Accessories"
+                  },
+                  "tags": [
+                    {
+                      "code": "mapping",
+                      "list": [
+                        {
+                          "code": "primary_taxonomy",
+                          "value": "RET12-100"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "GENDER-UNISEX",
+              "descriptor": {
+                "name": "Unisex"
+              },
+              "categories": [
+                {
+                  "id": "GENDER-UNISEX-FOOTWEAR",
+                  "descriptor": {
+                    "name": "Unisex Footwear"
+                  },
+                  "tags": [
+                    {
+                      "code": "mapping",
+                      "list": [
+                        {
+                          "code": "primary_taxonomy",
+                          "value": "RET12-181"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "taxonomy-occasion",
+          "descriptor": {
+            "name": "Occasion-Based Taxonomy",
+            "short_desc": "Products organized by occasion"
+          },
+          "categories": [
+            {
+              "id": "OCCASION-FORMAL",
+              "descriptor": {
+                "name": "Formal"
+              },
+              "tags": [
+                {
+                  "code": "mapping",
+                  "list": [
+                    {
+                      "code": "primary_taxonomy",
+                      "value": "RET12-134, RET12-101"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "OCCASION-CASUAL",
+              "descriptor": {
+                "name": "Casual"
+              },
+              "tags": [
+                {
+                  "code": "mapping",
+                  "list": [
+                    {
+                      "code": "primary_taxonomy",
+                      "value": "RET12-126, RET12-181"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bpp/providers": [
+        {
+          "id": "FashionStore",
+          "descriptor": {
+            "name": "FashionStore",
+            "short_desc": "Quality Fashion Products",
+            "images": ["https://fashionstore.com/logo.png"]
+          },
+          "categories": [
+            {
+              "id": "RET12-134",
+              "descriptor": {
+                "name": "Shirts"
+              }
+            }
+          ],
+          "items": [
+            {
+              "id": "ITEM-12345",
+              "descriptor": {
+                "name": "Premium Cotton Formal Shirt",
+                "short_desc": "Men's Blue Formal Cotton Shirt",
+                "long_desc": "Men's Blue Formal Cotton Shirt with Regular Collar and Full Sleeves. Perfect for office and formal occasions. Made with premium breathable cotton.",
+                "images": [
+                  "https://fashionstore.com/images/blue-shirt-front.jpg",
+                  "https://fashionstore.com/images/blue-shirt-back.jpg"
+                ]
+              },
+              "price": {
+                "currency": "INR",
+                "value": "1499.00",
+                "maximum_value": "1999.00"
+              },
+              "category_id": "RET12-134",
+              "fulfillment_id": "standard-delivery",
+              "location_id": "warehouse-bangalore",
+              "@ondc/org/returnable": true,
+              "@ondc/org/cancellable": true,
+              "@ondc/org/return_window": "P7D",
+              "@ondc/org/seller_pickup_return": true,
+              "@ondc/org/time_to_ship": "P2D",
+              "@ondc/org/available_on_cod": false,
+              "@ondc/org/contact_details_consumer_care": "support@fashionstore.com, +91-9876543210",
+              "@ondc/org/statutory_reqs_packaged_commodities": {
+                "manufacturer_or_packer_name": "FashionStore Apparels Ltd.",
+                "manufacturer_or_packer_address": "123 Textile Hub, Mumbai, India",
+                "common_or_generic_name_of_commodity": "Shirt",
+                "month_year_of_manufacture_packing_import": "02/2025"
+              },
+              "tags": [
+                {
+                  "code": "type",
+                  "list": [
+                    {
+                      "code": "type",
+                      "value": "item"
+                    }
+                  ]
+                },
+                {
+                  "code": "origin",
+                  "list": [
+                    {
+                      "code": "country",
+                      "value": "IND"
+                    }
+                  ]
+                },
+                {
+                  "code": "attributes",
+                  "list": [
+                    {
+                      "code": "gender",
+                      "value": "Men"
+                    },
+                    {
+                      "code": "colour",
+                      "value": "Blue"
+                    },
+                    {
+                      "code": "size",
+                      "value": "40"
+                    },
+                    {
+                      "code": "brand_name",
+                      "value": "FormalWear"
+                    },
+                    {
+                      "code": "material_content",
+                      "value": "100% Cotton"
+                    },
+                    {
+                      "code": "fabric",
+                      "value": "Cotton Poplin"
+                    },
+                    {
+                      "code": "pattern",
+                      "value": "Solid"
+                    },
+                    {
+                      "code": "sleeve_length",
+                      "value": "Full Sleeve"
+                    },
+                    {
+                      "code": "collar",
+                      "value": "Regular"
+                    },
+                    {
+                      "code": "fit",
+                      "value": "Slim"
+                    },
+                    {
+                      "code": "occasion",
+                      "value": "Formal"
+                    }
+                  ]
+                },
+                {
+                  "code": "alternate_taxonomies",
+                  "list": [
+                    {
+                      "code": "gender_taxonomy",
+                      "value": "GENDER-MEN-APPAREL-TOPS"
+                    },
+                    {
+                      "code": "occasion_taxonomy",
+                      "value": "OCCASION-FORMAL"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ITEM-23456",
+              "descriptor": {
+                "name": "Unisex Casual Sandals",
+                "short_desc": "Comfortable Unisex Beach Sandals",
+                "long_desc": "Lightweight and durable unisex sandals perfect for casual outings and beach wear. Features cushioned footbed and anti-slip sole.",
+                "images": [
+                  "https://fashionstore.com/images/sandals-front.jpg",
+                  "https://fashionstore.com/images/sandals-top.jpg"
+                ]
+              },
+              "price": {
+                "currency": "INR",
+                "value": "899.00",
+                "maximum_value": "1299.00"
+              },
+              "category_id": "RET12-181",
+              "fulfillment_id": "standard-delivery",
+              "location_id": "warehouse-bangalore",
+              "@ondc/org/returnable": true,
+              "@ondc/org/cancellable": true,
+              "@ondc/org/return_window": "P7D",
+              "@ondc/org/seller_pickup_return": true,
+              "@ondc/org/time_to_ship": "P2D",
+              "@ondc/org/available_on_cod": true,
+              "@ondc/org/contact_details_consumer_care": "support@fashionstore.com, +91-9876543210",
+              "@ondc/org/statutory_reqs_packaged_commodities": {
+                "manufacturer_or_packer_name": "FashionStore Footwear Ltd.",
+                "manufacturer_or_packer_address": "456 Footwear Hub, Chennai, India",
+                "common_or_generic_name_of_commodity": "Sandals",
+                "month_year_of_manufacture_packing_import": "01/2025"
+              },
+              "tags": [
+                {
+                  "code": "type",
+                  "list": [
+                    {
+                      "code": "type",
+                      "value": "item"
+                    }
+                  ]
+                },
+                {
+                  "code": "origin",
+                  "list": [
+                    {
+                      "code": "country",
+                      "value": "IND"
+                    }
+                  ]
+                },
+                {
+                  "code": "attributes",
+                  "list": [
+                    {
+                      "code": "gender",
+                      "value": "Unisex"
+                    },
+                    {
+                      "code": "colour",
+                      "value": "Brown"
+                    },
+                    {
+                      "code": "size",
+                      "value": "8"
+                    },
+                    {
+                      "code": "brand_name",
+                      "value": "ComfortStep"
+                    },
+                    {
+                      "code": "material_content",
+                      "value": "Synthetic"
+                    },
+                    {
+                      "code": "sole_material",
+                      "value": "Rubber"
+                    },
+                    {
+                      "code": "fastening",
+                      "value": "Slip-On"
+                    },
+                    {
+                      "code": "occasion",
+                      "value": "Casual"
+                    }
+                  ]
+                },
+                {
+                  "code": "alternate_taxonomies",
+                  "list": [
+                    {
+                      "code": "gender_taxonomy",
+                      "value": "GENDER-UNISEX-FOOTWEAR"
+                    },
+                    {
+                      "code": "occasion_taxonomy",
+                      "value": "OCCASION-CASUAL"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fulfillments": [
+            {
+              "id": "standard-delivery",
+              "type": "Delivery",
+              "tracking": true,
+              "contact": {
+                "phone": "9876543210",
+                "email": "fulfillment@fashionstore.com"
+              }
+            }
+          ],
+          "locations": [
+            {
+              "id": "warehouse-bangalore",
+              "gps": "12.9716,77.5946",
+              "address": {
+                "locality": "Koramangala",
+                "city": "Bangalore",
+                "state": "Karnataka",
+                "country": "India",
+                "area_code": "560034"
+              },
+              "time": {
+                "days": "1,2,3,4,5,6",
+                "range": {
+                  "start": "0900",
+                  "end": "1800"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
